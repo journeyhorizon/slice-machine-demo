@@ -1,0 +1,75 @@
+@use "../../styles/mediaQueries.scss" as *;
+
+.root {
+}
+
+.listQuestions {
+  padding: 0 24px 0 24px;
+
+  @include media-viewport-medium {
+    width: 600px;
+    margin: 0 auto 0 auto;
+  }
+}
+
+.questionItem {
+  border: 1px solid var(--matterColorLightGrey);
+  padding: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+  min-height: 100%;
+  margin-bottom: 8px;
+}
+.active {
+  .answerBox {
+    max-height: 500px;
+    height: 100%;
+  }
+  .arrow {
+    transform: rotate(-90deg);
+  }
+}
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.questionText {
+  margin: 0;
+  font-size: 14px;
+  font-weight: var(--fontWeightSemiBold);
+  letter-spacing: -0.08px;
+  line-height: 24px;
+  @include media-viewport-medium {
+    font-size: 18px;
+  }
+}
+
+.arrow {
+  transform: rotate(90deg);
+  margin-right: 5px;
+  color: var(--primaryColor);
+  transition: all 0.5s;
+  width: 9px;
+}
+
+.answerBox {
+  transition: all 0.5s;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.answer {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: -0.08px;
+  line-height: 24px;
+}
+
+.haveMoreBtn {
+  width: 218px;
+  margin: 40px auto 80px auto;
+  display: block;
+}

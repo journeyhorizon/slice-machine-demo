@@ -1,0 +1,223 @@
+@use '../../styles/fonts.scss' as *;
+@use '../../styles/mediaQueries.scss' as *;
+
+.root {
+  /* Layout */
+  display: none;
+  padding: 0 24px 0 0;
+
+  /* Size */
+  width: 100%;
+  height: var(--topbarHeightDesktop);
+
+  @include media-viewport-medium {
+    display: flex;
+  }
+}
+
+.logoWrapper {
+  // Layout
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Size
+  width: 200px;
+  height: 100%;
+}
+
+.logo {
+}
+
+.searchForm {
+  // Layout
+  display: flex;
+  flex-grow: 1;
+  margin-right: 24px;
+  padding-left: 34px;
+
+  // Outline
+  border-left: 1px solid var(--matterColor);
+
+  // Size
+  height: 100%;
+
+  cursor: text;
+}
+
+.searchIcon {
+  height: 100%;
+}
+
+.field {
+  // Layout
+  flex-grow: 1;
+
+  // Size
+  height: 100%;
+}
+
+.searchInput {
+  @include marketplaceDefaultFontStyles;
+  // Fill
+  background-color: transparent;
+
+  // Layout
+  margin: 0;
+  padding-left: 10px;
+
+  // Outline
+  border-bottom: 0px solid transparent;
+
+  // Size
+  height: 100%;
+  width: 100%;
+
+  // Typo
+  color: var(--matterColorLight);
+}
+
+.links {
+  display: flex;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.link {
+  // Layout
+  padding: 0 12px;
+  margin: 28px 0;
+
+  // Typo
+  line-height: 16px;
+  color: var(--matterColorLight);
+}
+
+/* Profile menu */
+.profileMenuLabel {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0 12px 0 12px;
+
+  &:active {
+    border-bottom: 0;
+  }
+}
+
+.profileMenuIsOpen {
+  &:hover {
+    border-bottom: 0;
+  }
+}
+
+.avatar {
+  margin: 16px 12px;
+  cursor: pointer;
+}
+
+.profileMenuContent {
+  min-width: 276px;
+  padding-top: 20px;
+  background-color: var(--matterColorLight);
+  color: var(--matterColorLight);
+}
+
+/* left animated "border" like hover element */
+.menuItemBorder {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  height: calc(100% - 4px);
+  width: 0;
+}
+
+.profileSettingsLink,
+.yourListingsLink {
+  @include marketplaceH4FontStyles;
+  position: relative;
+  display: block;
+
+  /* Dimensions */
+  width: 100%;
+  margin: 0;
+  padding: 4px 24px;
+
+  /* Layout details */
+  color: var(--matterColor);
+  text-align: left;
+  transition: var(--transitionStyleButton);
+
+  &:hover {
+    color: var(--matterColorDark);
+    text-decoration: none;
+
+    & .menuItemBorder {
+      width: 6px;
+      background-color: var(--primaryColor);
+    }
+  }
+
+  @include media-viewport-medium {
+    margin: 0;
+  }
+}
+
+.logoutButton {
+  @include marketplaceLinkStyles;
+  /* Font is specific to this component */
+  @include marketplaceH5FontStyles;
+  display: inline-block;
+  font-size: 14px;
+
+  /* Dimensions */
+  position: relative;
+  width: 100%;
+  min-width: 276px;
+  margin-top: 20px 0;
+  padding: 20px 24px;
+
+  /* Layout details */
+  color: var(--matterColorAnti);
+  text-align: left;
+  white-space: nowrap;
+  transition: var(--transitionStyleButton);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--matterColorNegative);
+
+  &:hover {
+    color: var(--matterColorDark);
+    text-decoration: none;
+
+    & .menuItemBorder {
+      height: 100%;
+      width: 6px;
+      top: 0;
+      background-color: var(--primaryColor);
+    }
+  }
+
+  @include media-viewport-medium {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.currentPage {
+  color: var(--matterColorDark);
+  position: relative;
+
+  & .menuItemBorder {
+    width: 6px;
+    background-color: var(--matterColorDark);
+  }
+
+  &:hover {
+    & .menuItemBorder {
+      background-color: var(--matterColorDark);
+    }
+  }
+}

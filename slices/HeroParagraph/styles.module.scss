@@ -1,0 +1,78 @@
+@use '/src/styles/mediaQueries.scss' as *;
+@use '/src/styles/ui.scss' as *;
+
+.root {
+  @include aboutUsBackgroundImage;
+  padding: 41px 24px 160px 24px;
+  color: var(--matterColorLight);
+  @include media-viewport-medium {
+    padding: 85px 0 200px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.title {
+  p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: var(--fontWeightRegular);
+    font-family: var(--interFont);
+    letter-spacing: -0.78px;
+    margin-bottom: 54px;
+
+    @include media-viewport-medium {
+      font-size: 80px;
+      letter-spacing: -2.5px;
+      font-weight: var(--fontWeightSemiBold);
+      margin-bottom: 85px;
+    }
+  }
+}
+
+.descriptionBox {
+  margin-bottom: 40px;
+
+  @include media-viewport-medium {
+    width: 600px;
+  }
+}
+
+.descriptionBox h5,
+.descriptionBox h6,
+.descriptionBox h4,
+.descriptionBox h3,
+.descriptionBox h2 {
+  font-size: 20px;
+  letter-spacing: -0.33px;
+  line-height: 36px;
+  font-weight: var(--fontWeightSemiBold);
+  margin-bottom: 10px;
+
+  @include media-viewport-large {
+    font-weight: var(--fontWeightSemiBold);
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.descriptionBox p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: var(--fontWeightRegular);
+
+  @include media-viewport-large {
+    font-size: 18px;
+  }
+}
+
+.seperator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--seperatorColor);
+  margin-bottom: 39.5px;
+  @include media-viewport-medium {
+    width: 600px;
+  }
+}

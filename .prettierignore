@@ -1,0 +1,7 @@
+.circleci
+.git
+.next
+.vscode
+node_modules
+public
+script

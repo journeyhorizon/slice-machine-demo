@@ -1,0 +1,229 @@
+{
+  "_cts": {
+    "hero_section": {
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "home_page": {},
+    "page": {
+      "title": {
+        "content": "Page title"
+      },
+      "description": {
+        "content": "Page description"
+      }
+    }
+  },
+  "slices": {
+    "HeroSection": {
+      "default": {
+        "primary": {
+          "title": {
+            "content": "This is title in hero"
+          },
+          "cta_text": {
+            "content": "CTA Text"
+          },
+          "logos_background_color": {
+            "content": "#ffffff"
+          }
+        },
+        "items": {
+          "brand_name": {
+            "content": "Test brand"
+          },
+          "logo_width": {
+            "content": 127
+          },
+          "logo_mobile_width": {
+            "content": 80
+          },
+          "logo_mobile_height": {
+            "content": 48
+          },
+          "logo_height": {
+            "content": 74
+          },
+          "logo": {
+            "content": "https://dwybw5237mk3a.cloudfront.net/logo_region_9254f1b362.png"
+          }
+        }
+      },
+      "withoutLogos": {
+        "items": {}
+      }
+    },
+    "IntroVideo": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "StepsSection": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "sid": {
+            "content": "index"
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "icon": {
+            "content": "https://images.prismic.io/jhdemo/f4f06a2d-a231-4e78-96cb-070175938553_Search.png"
+          }
+        }
+      }
+    },
+    "FeaturesSection": {
+      "default": {
+        "items": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "title": {
+            "content": "Title here"
+          }
+        },
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "AdsBigBanner": {
+      "default": {
+        "primary": {
+          "image": {
+            "content": "https://dwybw5237mk3a.cloudfront.net/Our_Smart_Phone_A_Pp_Coming_Soon_017158cfe8.png"
+          }
+        }
+      }
+    },
+    "QuotesSection": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "author_name": {
+            "content": "Chu test"
+          }
+        }
+      }
+    },
+    "HeroParagraph": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "OurJourneySection": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "OurTeam": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "FaqList": {}
+  }
+}

@@ -1,0 +1,54 @@
+@use '../../styles/mediaQueries.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+.root {
+  padding: 15px 24px;
+  background-color: var(--matterColorNear);
+
+  @include media-viewport-large {
+    padding: 85px 50px;
+  }
+}
+
+.selectedPlanTitle {
+  font-size: 14px;
+  font-weight: var(--fontWeightSemiBold);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+
+  @include media-viewport-large {
+    margin-bottom: 18px;
+  }
+}
+
+.selectedPlanText {
+  font-size: 12px;
+  font-weight: var(--fontWeightSemiBold);
+  margin-bottom: 5px;
+}
+
+.description {
+  display: none;
+  font-size: 12px;
+  font-weight: var(--fontWeightRegular);
+
+  @include media-viewport-large {
+    display: block;
+    max-width: 440px;
+    margin: 45px 0px 0px;
+  }
+}
+
+.mobile {
+  @include media-viewport-large {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @include media-viewport-large {
+    display: block;
+  }
+}

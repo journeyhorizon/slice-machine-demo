@@ -1,0 +1,37 @@
+@use '../../styles/mediaQueries.scss' as *;
+@use '../../styles/ui.scss' as *;
+
+.root {
+  @include staticBackgroundImage;
+  color: var(--matterColorLight);
+  text-align: center;
+  min-height: 355px;
+  padding: 41px 30px 0 30px;
+
+  @include media-viewport-medium {
+    padding-top: 85px;
+    min-height: 605px;
+    margin-bottom: 50px;
+  }
+}
+.title {
+  font-size: 25px;
+  font-weight: var(--fontWeightRegular);
+  letter-spacing: -0.78px;
+  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+  @include media-viewport-medium {
+    font-size: 80px;
+    letter-spacing: -2.5px;
+    font-weight: var(--fontWeightSemiBold);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+}
+
+.description {
+  font-size: 14px;
+  @include media-viewport-medium {
+    font-size: 18px;
+  }
+}

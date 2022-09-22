@@ -1,0 +1,404 @@
+@use './mediaQueries.scss' as *;
+
+/* ================ Links ================ */
+
+@mixin marketplaceLinkStyles {
+  /* Position and dimensions */
+  display: inline;
+  margin: 0;
+  padding: 0;
+
+  /* Borders */
+  border: none;
+
+  /* Colors */
+  color: var(--primaryColor);
+
+  /* Text size should be inherited */
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+/* ================ Default font ================ */
+
+@mixin marketplaceDefaultFontStyles {
+  font-family: var(--fontFamily);
+  font-weight: var(--fontWeightRegular);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  /* No margins for default font */
+
+  @include media-viewport-medium {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+@mixin marketplaceSmallFontStyles {
+  font-family: var(--fontFamily);
+  font-weight: var(--fontWeightRegular);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* ================ Body font ================ */
+
+@mixin marketplaceBodyFontStyles {
+  font-family: var(--fontFamily);
+  font-weight: var(--fontWeightRegular);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  @include media-viewport-medium {
+    font-size: 16px;
+    line-height: 32px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+/* ================ Hero title ================ */
+
+@mixin marketplaceHeroTitleFontStyles {
+  font-weight: var(--fontWeightRegular);
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: -0.7px;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin: 12px 0;
+
+  @include media-viewport-medium {
+    font-weight: var(--fontWeightBold);
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1.5px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-bottom: 25px;
+  }
+
+  @include media-viewport-larger {
+    font-size: 80px;
+    line-height: 96px;
+    letter-spacing: -1.5px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-bottom: 25px;
+  }
+}
+
+/* ================ H1, H2, H3, H4, H5 & H6 ================ */
+
+@mixin marketplaceH1FontStyles {
+  font-size: 30px;
+  line-height: 36px;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 18px;
+  margin-bottom: 18px;
+
+  @include media-viewport-medium {
+    font-size: 50px;
+    font-weight: var(--fontWeightSemiBold);
+    line-height: 58px;
+    letter-spacing: -2px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+@mixin marketplaceH2FontStyles {
+  font-weight: var(--fontWeightSemiBold);
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.3px;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 21px;
+  margin-bottom: 17px;
+
+  @include media-viewport-medium {
+    line-height: 32px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 21px;
+    margin-bottom: 19px;
+  }
+}
+
+@mixin marketplaceH3FontStyles {
+  font-weight: var(--fontWeightSemiBold);
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 16px;
+  margin-bottom: 14px;
+
+  @include media-viewport-medium {
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+@mixin marketplaceH4FontStyles {
+  font-weight: var(--fontWeightMedium);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  @include media-viewport-medium {
+    font-weight: var(--fontWeightMedium);
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 17px;
+    margin-bottom: 15px;
+  }
+}
+
+@mixin marketplaceH5FontStyles {
+  font-weight: var(--fontWeightRegular);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 10px;
+  margin-bottom: 8px;
+
+  @include media-viewport-medium {
+    line-height: 24px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 10px;
+    margin-bottom: 14px;
+  }
+}
+
+@mixin marketplaceH6FontStyles {
+  font-weight: var(--fontWeightBold);
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 10px;
+  margin-bottom: 8px;
+
+  @include media-viewport-medium {
+    line-height: 16px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 10px;
+    margin-bottom: 6px;
+  }
+}
+
+/* ================ Other fonts ================ */
+
+@mixin marketplaceTinyFontStyles {
+  font-family: 'poppins', Helvetica, Arial, sans-serif;
+  font-weight: var(--fontWeightRegular);
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 9.5px;
+  margin-bottom: 8.5px;
+
+  @include media-viewport-medium {
+    line-height: 16px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 10.5px;
+    margin-bottom: 13.5px;
+  }
+}
+
+/* ================ Inputs ================ */
+
+@mixin marketplaceInputStyles {
+  /* Dimensions */
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0 5px 0;
+
+  /* Borders */
+  border: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--marketplaceColor);
+  border-radius: 0;
+
+  &::placeholder {
+    color: var(--matterColorAnti);
+  }
+
+  /* Effects */
+
+  transition: border-bottom-color var(--transitionStyle);
+
+  &:hover,
+  &:focus {
+    border-bottom-color: var(--matterColor);
+    outline: none;
+  }
+
+  @include media-viewport-medium {
+    padding: 4px 0 2px 0;
+  }
+}
+
+@mixin marketplaceSelectStyles {
+  /* Dimensions */
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0 5px 0;
+
+  /* Unset user agent styles */
+  appearance: none;
+
+  /* Borders */
+  border: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--marketplaceColor);
+  border-radius: 0;
+
+  /* Background */
+  background-image: url('data:image/svg+xml;utf8,<svg width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg"><path d="M6.53 7.472c.26.26.68.26.94 0l5.335-5.333c.26-.263.26-.684 0-.944-.26-.26-.683-.26-.943 0L7 6.056l-4.862-4.86c-.26-.26-.683-.26-.943 0-.26.26-.26.68 0 .943L6.53 7.47z" stroke="%234A4A4A" fill="%234A4A4A" fill-rule="evenodd"/></svg>');
+  background-size: 16px 16px;
+  background-position: center right;
+
+  /* Effects */
+
+  cursor: pointer;
+  transition: border-bottom-color var(--transitionStyle);
+
+  &:hover,
+  &:focus {
+    border-bottom-color: var(--matterColor);
+    outline: none;
+  }
+
+  @include media-viewport-medium {
+    padding: 4px 0 2px 0;
+  }
+}
+
+/* ================ Tabbed navigation font styles ================ */
+
+@mixin marketplaceTabNavFontStyles {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+
+  @include media-viewport-large {
+    font-weight: var(--fontWeightSemiBold);
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@mixin marketplaceTabNavHorizontalFontStyles {
+  font-weight: var(--fontWeightMedium);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+@mixin marketplaceModalBaseStyles {
+  flex-grow: 1;
+
+  /* Create context so the close button can be positioned within it */
+  position: relative;
+
+  /* Display and dimensions */
+  display: flex;
+  flex-direction: column;
+  padding: var(--modalPadding);
+
+  background-color: var(--matterColorLight);
+  border-radius: var(--borderRadius);
+  border-bottom: none;
+
+  @include media-viewport-medium {
+    flex-basis: 480px;
+    flex-grow: 0;
+    /* min-height: 568px; */
+    padding: var(--modalPaddingMedium);
+    margin-top: 12.5vh;
+    margin-bottom: 12.5vh;
+    border-bottom: 8px solid var(--marketplaceColor);
+  }
+}
+
+@mixin marketplaceModalCloseIcon {
+  display: inline-block;
+  margin-left: 8px;
+
+  /* Move X icon vertically to align it with the close text. */
+  margin-top: 3px;
+
+  box-sizing: content-box;
+
+  @include media-viewport-medium {
+    margin-top: 2px;
+  }
+}
+
+@mixin marketplaceMessageFontStyles {
+  font-family: var(--fontFamily);
+  font-weight: var(--fontWeightRegular);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin marketplaceModalTitleStyles {
+  font-weight: var(--fontWeightSemiBold);
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -0.5px;
+  margin: 0;
+  font-weight: var(--fontWeightBold);
+
+  @include media-viewport-medium {
+    font-weight: var(--fontWeightSemiBold);
+    line-height: 40px;
+    letter-spacing: -0.9px;
+    margin: 0;
+  }
+}
+
+@mixin marketplaceModalParagraphStyles {
+  margin: 18px 0 0 0;
+
+  @include media-viewport-medium {
+    margin: 24px 0 0 0;
+  }
+}
+
+@mixin marketplaceModalErrorStyles {
+  @include marketplaceH4FontStyles;
+  margin-top: 24px;
+  color: var(--failColor);
+}
+
+@mixin marketplaceModalHelperText {
+  @include marketplaceH5FontStyles;
+  color: var(--matterColorAnti);
+  margin: 0;
+}
+
+@mixin marketplaceModalHelperLink {
+  @include marketplaceH5FontStyles;
+  color: var(--matterColor);
+  margin: 0;
+}

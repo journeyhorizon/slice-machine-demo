@@ -1,0 +1,27 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Nisi aliqua cillum incididunt nostrud sint sit tempor.",
+          "spans": []
+        }
+      ],
+      "cta_text": [
+        {
+          "type": "paragraph",
+          "text": "Aliquip proident voluptate aute irure cillum est adipisicing eu eu quis exercitation aute est.",
+          "spans": []
+        }
+      ],
+      "background_url": "snow"
+    },
+    "slice_type": "home_page"
+  }
+]

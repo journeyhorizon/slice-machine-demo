@@ -1,0 +1,50 @@
+@use "../../styles/mediaQueries.scss" as *;
+
+.root {
+}
+
+.form {
+  padding: 41px 24px 85px 24px;
+
+  @include media-viewport-medium {
+    width: 600px;
+    margin: 0 auto 0 auto;
+  }
+}
+
+.field,
+.nameFields {
+  margin-bottom: 30px;
+}
+
+.nameFields {
+  display: flex;
+}
+
+.firstName {
+  margin-right: 20px;
+  min-width: 110px;
+  @include media-viewport-medium {
+    min-width: 40%;
+  }
+}
+
+.lastName {
+  width: 100%;
+}
+
+.formBtn {
+  margin-top: 30px;
+}
+
+.error {
+  font-size: 14px;
+  font-weight: var(--fontWeightRegular);
+  color: var(--failColor);
+}
+
+.success {
+  font-size: 14px;
+  font-weight: var(--fontWeightRegular);
+  color: var(--successColor);
+}

@@ -1,0 +1,119 @@
+@use '../../../../src/styles/fonts.scss' as *;
+@use '../../../../src/styles/mediaQueries.scss' as *;
+
+.root {
+  // Size
+  max-width: 100%;
+
+  // Layout
+  padding: 25px 30px;
+
+  // Fill
+  background-color: var(--matterColorLight);
+
+  @include media-viewport-medium {
+    // Layout
+    padding: 16px 60px;
+  }
+
+  @include media-viewport-large {
+    // Layout
+    padding: 16px 80px;
+  }
+}
+
+.title {
+  @include marketplaceDefaultFontStyles;
+  font-weight: var(--fontWeightSemiBold);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 20px 0;
+
+  @include media-viewport-medium {
+    margin-bottom: 35px;
+  }
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 315px;
+  margin: auto;
+
+  @include media-viewport-medium {
+    width: 100%;
+    max-width: 1160px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.logoWrapper {
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 25px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  @include media-viewport-medium {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.logo {
+}
+
+.logoRegion {
+  position: relative;
+  width: 80px;
+  height: 48px;
+
+  @include media-viewport-larger {
+    width: 127px;
+    height: 74px;
+  }
+}
+
+.logoRiotAct {
+  width: 63px;
+  height: 58px;
+
+  @include media-viewport-larger {
+    width: 81px;
+    height: 74px;
+  }
+}
+
+.logoMyGungahlin {
+  width: 59px;
+  height: 58px;
+
+  @include media-viewport-larger {
+    width: 75px;
+    height: 74px;
+  }
+}
+
+.logoHit1047 {
+  width: 90px;
+  height: 38px;
+
+  @include media-viewport-larger {
+    width: 175px;
+    height: 74px;
+  }
+}
+
+.logoMix1063 {
+  width: 44px;
+  height: 48px;
+
+  @include media-viewport-larger {
+    width: 68px;
+    height: 74px;
+  }
+}

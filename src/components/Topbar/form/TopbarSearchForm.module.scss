@@ -1,0 +1,112 @@
+@use '../../../styles/fonts.scss' as *;
+@use '../../../styles/mediaQueries.scss' as *;
+
+.searchForm {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 3px solid var(--matterColor);
+  padding-top: 30px;
+
+  @include media-viewport-medium {
+    // Layout
+    display: flex;
+    flex-grow: 1;
+    margin-right: 24px;
+    padding-left: 34px;
+    padding-top: unset;
+    align-items: center;
+
+    // Outline
+    border-left: 1px solid var(--matterColor);
+
+    // Size
+    height: 100%;
+
+    cursor: text;
+    border-bottom: none;
+  }
+}
+
+.searchIcon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--primaryColor);
+  margin-bottom: 18px;
+
+  @include media-viewport-medium {
+    height: 100%;
+    width: unset;
+    height: unset;
+    stroke: var(--matterColorLight);
+    margin-bottom: unset;
+  }
+}
+
+.field {
+  // Layout
+  flex-grow: 1;
+
+  // Size
+  height: 100%;
+}
+
+.searchInput {
+  @include marketplaceH2FontStyles;
+  border-bottom: 0px solid transparent;
+  padding: 4px 13px 10px 13px;
+  margin: 0;
+
+  // Size
+  height: 50px;
+
+  // Fill
+  background-color: var(--matterColorBright);
+
+  // Typo
+  color: var(--matterColor);
+  line-height: unset;
+
+  &::placeholder {
+    @include marketplaceH2FontStyles;
+    color: var(--matterColorAnti);
+    margin: 0;
+  }
+
+  @include media-viewport-medium {
+    @include marketplaceDefaultFontStyles;
+    // Fill
+    background-color: transparent;
+
+    // Layout
+    margin: 0;
+    padding-left: 10px !important;
+
+    // Outline
+    border-bottom: 0px solid transparent !important;
+
+    // Size
+    height: 100%;
+    width: 100%;
+
+    // Typo
+    color: var(--matterColorLight);
+
+    &::placeholder {
+      @include marketplaceDefaultFontStyles;
+      color: var(--matterColorAnti);
+      margin: 0;
+    }
+  }
+
+}
+
+.submit {
+  display: block;
+  margin: auto;
+  margin-top: 70px;
+  width: 245px;
+
+  @include media-viewport-medium {
+    display: none;
+  }
+}

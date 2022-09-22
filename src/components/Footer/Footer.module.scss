@@ -1,0 +1,124 @@
+@use '../../styles/mediaQueries.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+@mixin footerText {
+  @include marketplaceH3FontStyles;
+  display: block;
+  margin: 0;
+  color: var(--matterColorLight);
+  font-weight: var(--fontWeightMedium);
+}
+
+.root {
+  // Layout
+  padding: 30px 24px;
+
+  // Fill
+  background-color: var(--matterColorDark);
+
+  @include media-viewport-medium {
+    padding: 60px;
+  }
+
+  @include media-viewport-largeWithPaddings {
+    padding: 60px calc((100vw - 1040px) / 2) 30px;
+  }
+}
+
+.content {
+  padding-bottom: 60px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--matterColorAnti);
+
+  @include media-viewport-large {
+    display: flex;
+    border-bottom: 0px solid transparent;
+    margin-bottom: 0px;
+  }
+}
+
+.logoWrapper {
+  @include media-viewport-large {
+    margin-right: 100px;
+  }
+
+  @include media-viewport-largeWithPaddings {
+    margin-right: 130px;
+  }
+}
+
+// Footer links
+.links {
+  margin: 30px 0;
+
+  @include media-viewport-medium {
+    display: flex;
+    flex-grow: 1;
+    margin: 0;
+  }
+}
+
+.groupLink {
+  @include media-viewport-medium {
+    margin-right: 100px;
+  }
+
+  @include media-viewport-largeWithPaddings {
+    margin-right: 160px;
+  }
+}
+
+.groupLinkMiddle {
+  @include media-viewport-largeWithPaddings {
+    margin-right: 109px;
+  }
+}
+
+.link {
+  color: var(--matterColorLight) !important;
+  @include footerText;
+  margin-bottom: 12px;
+
+  @include media-viewport-large {
+    margin-top: 0px;
+  }
+}
+
+// Social links
+.socialLinks {
+}
+
+.socialLinkTitle {
+  @include footerText;
+  margin-bottom: 15px;
+
+  @include media-viewport-large {
+    margin-top: 0;
+  }
+}
+
+.icons {
+  display: flex;
+  .iconWrapper {
+    display: inline-block;
+    margin-right: 28px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .icon {
+    height: 30px;
+    stroke: var(--matterColorLight);
+  }
+}
+
+.copyright {
+  @include marketplaceH6FontStyles;
+  font-weight: var(--fontWeightRegular);
+  color: var(--matterColorLight);
+  margin: 0;
+  letter-spacing: -0.2px;
+  text-transform: none;
+}

@@ -1,0 +1,5 @@
+@use '../../styles/fonts.scss' as *;
+
+.root {
+  @include marketplaceLinkStyles;
+}

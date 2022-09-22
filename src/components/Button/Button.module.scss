@@ -1,0 +1,139 @@
+@use '../../styles/fonts.scss' as *;
+
+.root {
+  /* Layout */
+  
+
+  /* Size */
+  width: 100%;
+
+  /* Outline */
+  border: 0px solid transparent;
+  border-radius: 4px;
+
+  /* Fill */
+  background-color: var(--primaryButtonColor);
+
+  /* Typo */
+  font-family: var(--defaultFont);
+  color: var(--matterColorLight);
+
+  /* Cursor */
+  cursor: pointer;
+
+  // Disabled
+  &:disabled {
+    background-color: var(--matterColorNegative);
+    color: var(--matterColorLight);
+    cursor: not-allowed;
+  }
+}
+
+/* Ready */
+.ready {
+  &:disabled {
+    background-color: var(--primaryButtonColor);
+    color: var(--matterColorLight);
+    cursor: not-allowed;
+  }
+}
+
+.smallButton {
+  /* Size */
+  height: 54px;
+
+  /* Typo */
+  font-size: 16px;
+  font-weight: var(--fontWeightRegular);
+  line-height: 24px;
+}
+
+.defaultButton {
+  /* Size */
+  height: 54px;
+
+  /* Typo */
+  font-size: 16px;
+  font-weight: var(--fontWeightRegular);
+  line-height: 24px;
+}
+
+@media all and (min-width: 768px) {
+  .defaultButton {
+    /* Size */
+    height: 60px;
+  }
+}
+
+.largeButton {
+  /* Size */
+  height: 54px;
+
+  /* Typo */
+  font-size: 16px;
+  font-weight: var(--fontWeightRegular);
+  line-height: 24px;
+}
+
+@media all and (min-width: 768px) {
+  .largeButton {
+    /* Size */
+    height: 82px;
+
+    /* Typo */
+    font-size: 20px;
+    font-weight: var(--fontWeightSemiBold);
+  }
+}
+
+svg.spinner circle {
+  stroke: var(--matterColorLight);
+}
+
+.inlineTextButtonRoot {
+  @include marketplaceLinkStyles;
+}
+
+.secondaryButtonRoot {
+  @extend .root;
+
+  background-color: var(--matterColorLight);
+  color: var(--matterColor);
+
+  padding: 0 0 2px 0;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--matterColor);
+
+  &:hover,
+  &:focus {
+    background-color: var(--matterColorLight);
+    border-color: var(--matterColorAnti);
+  }
+  &:disabled {
+    background-color: var(--matterColorNegative);
+    color: var(--matterColorLight);
+    border-color: var(--matterColorNegative);
+  }
+}
+
+.secondaryButton {
+  /* Class handle for secondary button state styles */
+}
+
+.secondaryButton.inProgress:disabled {
+  background-color: var(--matterColorLight);
+}
+
+.secondaryButton.ready:disabled {
+  background-color: var(--matterColorLight);
+}
+
+.secondaryButton svg.spinner circle {
+  stroke: var(--matterColorAnti);
+}
+
+.secondaryButton .checkmark {
+  stroke: var(--matterColorAnti);
+}

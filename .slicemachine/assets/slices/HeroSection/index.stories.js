@@ -1,0 +1,12 @@
+import MyComponent from '../../../../slices/HeroSection';
+
+export default {
+  title: 'slices/HeroSection'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"brand_name":"Test brand","logo":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://dwybw5237mk3a.cloudfront.net/logo_region_9254f1b362.png"},"logo_mobile_width":80,"logo_width":127,"logo_mobile_height":48,"logo_height":74}],"primary":{"title":"This is title in hero","cta_text":"CTA Text","background_image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1571126770897-2d612d1f7b89"},"mobile_background_image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1587905069134-008460d7a636"},"hero_image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"},"hero_mobile_image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1537498425277-c283d32ef9db"},"logos_background_color":"#ffffff"},"slice_type":"hero_section","id":"_Default"}} />
+_Default.storyName = ''
+
+export const _WithoutLogos = () => <MyComponent slice={{"variation":"withoutLogos","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":"captain","cta_text":"couple","background_url":"does","mobile_background_url":"lower","hero_image_url":"completely","hero_mobile_image_url":"hot"},"slice_type":"hero_section","id":"_WithoutLogos"}} />
+_WithoutLogos.storyName = ''

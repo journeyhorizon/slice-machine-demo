@@ -1,0 +1,26 @@
+@use '../../styles/mediaQueries.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+.root {
+  // Size
+  width: 100%;
+
+  // Spacing
+  padding: 15px;
+
+  // Fill
+  background-color: var(--matterColorLight);
+
+  // Outline
+  border: 1px solid var(--matterColorEA);
+}
+
+.root p {
+  // Spacing
+  margin: 0;
+
+  // Typo
+  font-size: 12px;
+  font-weight: var(--fontWeightMedium);
+  color: var(--matterColor);
+}

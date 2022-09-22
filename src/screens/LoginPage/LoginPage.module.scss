@@ -1,0 +1,82 @@
+@use '../../styles/mediaQueries.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+.container {
+  padding: 28px 24px 48px;
+
+  @include media-viewport-medium {
+    padding: 97px 0 200px;
+    width: 465px;
+    margin: auto;
+  }
+}
+
+.formContainer {
+}
+
+.pageTitle {
+  @include marketplaceH1FontStyles;
+  font-weight: var(--fontWeightSemiBold);
+  margin-bottom: 38px;
+
+  @include media-viewport-medium {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+}
+
+.separatedLine {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.or {
+  font-size: 14px;
+  font-weight: var(--fontWeightRegular);
+  margin: 0 10px;
+}
+
+.line {
+  border: 1px solid var(--matterColorNegative);
+  flex: 1;
+}
+
+.socialLogin {
+  padding: 15px 0;
+}
+
+.socialButton {
+  position: relative;
+  display: block;
+  margin: 0 auto 5px;
+  width: 326px;
+  border: 1px solid var(--matterColorNegative);
+  background-color: transparent;
+  color: var(--matterColor);
+  font-size: 14px;
+}
+
+.icon {
+  position: absolute;
+  left: 18px;
+  width: 16px;
+  height: 16px;
+}
+
+.facebookIcon {
+  position: absolute;
+  left: 18px;
+  width: 17px;
+  height: 17px;
+}
+
+.facebookIcon path {
+  fill: #4267b2;
+}
+
+.error {
+  font-size: 14px;
+  font-weight: var(--fontWeightRegular);
+  color: var(--failColor);
+}

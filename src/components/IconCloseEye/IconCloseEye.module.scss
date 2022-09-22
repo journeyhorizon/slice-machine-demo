@@ -1,0 +1,11 @@
+@use '../../styles/fonts.scss' as *;
+@use '../../styles/mediaQueries.scss' as *;
+
+.root {
+  width: 29px;
+  height: 12px;
+}
+
+.customPath {
+  fill: var(--matterColorDark)
+}

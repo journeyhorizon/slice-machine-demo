@@ -1,0 +1,9 @@
+@use '../../styles/mediaQueries.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+.container {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

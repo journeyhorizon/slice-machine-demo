@@ -1,0 +1,201 @@
+@use '../../styles/mediaQueries.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+.root {
+  /* Size */
+  width: 100%;
+  height: var(--topbarHeight);
+
+  @include media-viewport-medium {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger {
+  position: relative;
+  width: 66px;
+  padding: 22.5px;
+
+  transform: translateX(0px);
+}
+
+.hamburger span {
+  /* Layout */
+  position: relative;
+  display: block;
+  margin-bottom: 3px;
+  z-index: 1;
+
+  /* Size */
+  width: 18px;
+  height: 2px;
+
+  /* Fill */
+  background: var(--matterColorLight);
+
+  /* Animation */
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.hamburger span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.hamburger span:nth-child(3) {
+  transform-origin: 0% 100%;
+}
+
+.close {
+  position: absolute;
+  left: -30px;
+  top: 18px;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+
+.openedHamburger {
+}
+
+.openedHamburger span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+.openedHamburger span:nth-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+.openedHamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(-0.5px, -1px);
+}
+
+// Menu
+.authenticationGreeting {
+  @include marketplaceH2FontStyles;
+  width: 208px;
+  padding-top: 30px;
+  color: var(--matterColor);
+}
+
+.avatar {
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+.greetingUser {
+  @include marketplaceH2FontStyles;
+  color: var(--matterColor);
+  margin: 0 0 10px;
+}
+
+.logout {
+  font-size: 18px;
+  font-weight: var(--fontWeightRegular);
+  color: var(--matterColorAnti);
+}
+
+.links {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  @include marketplaceH3FontStyles;
+  color: var(--matterColor);
+  margin: 0 0 10px;
+}
+
+.currentPage {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 28px;
+    background-color: var(--matterColorDark);
+    left: -24px;
+    bottom: 0;
+  }
+}
+
+// Logo
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 28px;
+  width: auto;
+}
+
+// Search icon and search panel
+.searchIconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66px;
+}
+
+.searchIcon {
+}
+
+.searchForm {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 3px solid var(--matterColor);
+  padding-top: 30px;
+
+  .searchInput {
+    @include marketplaceH2FontStyles;
+
+    // Layout
+    border-bottom: 0px solid transparent;
+    padding: 4px 13px 10px 13px;
+    margin: 0;
+
+    // Size
+    height: 50px;
+
+    // Fill
+    background-color: var(--matterColorBright);
+
+    // Typo
+    color: var(--matterColor);
+    line-height: unset;
+
+    &::placeholder {
+      @include marketplaceH2FontStyles;
+      color: var(--matterColorAnti);
+      margin: 0;
+    }
+  }
+
+  .searchIcon {
+    width: 24px;
+    height: 24px;
+    stroke: var(--primaryColor);
+    margin-bottom: 18px;
+  }
+}

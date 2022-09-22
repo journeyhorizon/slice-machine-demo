@@ -1,0 +1,146 @@
+@use '../../src/styles/fonts.scss' as *;
+@use '../../src/styles/mediaQueries.scss' as *;
+
+.root {
+  padding: 30px 24px 0;
+
+  @include media-viewport-medium {
+    padding: 60px 12.5vw 0;
+  }
+
+  @include media-viewport-large {
+    padding: 60px 62px 0 62px;
+  }
+
+  .title {
+    p {
+      @include marketplaceH1FontStyles;
+      text-align: center;
+      margin: 0 24px 12px;
+      color: var(--matterColorDark);
+
+      @include media-viewport-large {
+        margin: 0 24px 30px;
+      }
+    }
+  }
+
+  .description {
+    p {
+      @include marketplaceDefaultFontStyles;
+      text-align: center;
+      margin: 0 24px 50px;
+    }
+  }
+
+  .slider {
+    :global {
+      .slick-next,
+      .slick-prev {
+        display: none;
+
+        @include media-viewport-medium {
+          display: block;
+          height: 36px;
+          width: 20px;
+        }
+      }
+      .slick-track {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .quoteItem {
+    padding: 0px 0px 5px 14px;
+    @include media-viewport-medium {
+      max-width: 815px;
+      margin: auto;
+    }
+  }
+
+  .quoteContent {
+    p {
+      @include marketplaceDefaultFontStyles;
+      position: relative;
+      font-weight: var(--fontWeightRegular);
+      font-style: italic;
+      margin-bottom: 30px;
+
+      @include media-viewport-larger {
+        font-size: 25px;
+        font-weight: var(--fontWeightRegular);
+        line-height: 38px;
+      }
+
+      &::before {
+        position: absolute;
+        top: -14px;
+        left: -14px;
+        content: '“';
+        font-size: 60px;
+        line-height: 36px;
+        font-weight: var(--fontWeightSemiBold);
+        color: var(--primaryColor);
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -30px;
+        margin-left: 5px;
+        content: '“';
+        font-size: 60px;
+        line-height: 36px;
+        font-weight: var(--fontWeightSemiBold);
+        color: var(--primaryColor);
+      }
+    }
+  }
+
+  .author {
+    font-size: 14px;
+    font-weight: var(--fontWeightSemiBold);
+    line-height: 24px;
+    margin: 0;
+    text-align: right;
+  }
+
+  :global {
+    .slick-dots {
+      li {
+        margin: 0;
+        margin-right: 5px;
+        width: 8px;
+        height: 8px;
+
+        button {
+          width: 8px;
+          height: 8px;
+          margin: 0;
+
+          &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--matterColorAnti);
+          }
+        }
+      }
+      .slick-active {
+        button {
+          &::before {
+            background-color: var(--primaryColor);
+          }
+        }
+      }
+    }
+  }
+}
+
+.breakLine {
+  display: block;
+  height: 30px;
+  width: 100%;
+}

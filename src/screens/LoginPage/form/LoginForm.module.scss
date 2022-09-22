@@ -1,0 +1,59 @@
+@use '../../../styles/fonts.scss' as *;
+@use '../../../styles/mediaQueries.scss' as *;
+
+.root {
+}
+
+.field {
+  margin-bottom: 28px;
+}
+
+.bottomWrapper {
+  max-width: 758px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 14px;
+
+  @include media-viewport-medium {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+.forgotPassword {
+  @include marketplaceTinyFontStyles;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.forgotPassword a {
+  color: var(--matterColorAnti);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back {
+  display: none;
+
+  @include media-viewport-medium {
+    display: block;
+    border: 0px solid transparent;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.submit {
+  @include media-viewport-medium {
+    width: 165px;
+  }
+}
+
+.error {
+  font-size: 14px;
+  font-weight: var(--fontWeightRegular);
+  color: var(--failColor);
+}

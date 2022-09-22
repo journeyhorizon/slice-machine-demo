@@ -1,0 +1,112 @@
+@use '/src/styles/fonts.scss' as *;
+@use '/src/styles/mediaQueries.scss' as *;
+@use '/src/styles/ui.scss' as *;
+
+.root {
+  padding: 40px 24px 100px 24px;
+  @include media-viewport-medium {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.title {
+  p {
+    font-size: 30px;
+    font-weight: var(--fontWeightSemiBold);
+    letter-spacing: -0.5px;
+    margin: 0 0 40px 0;
+    line-height: 36px;
+
+    @include media-viewport-medium {
+      width: 100%;
+    }
+    @include media-viewport-medium {
+      width: 600px;
+    }
+  }
+}
+
+.description {
+  p {
+    @include marketplaceDefaultFontStyles;
+    margin: 0 24px 40px;
+
+    @include media-viewport-medium {
+      width: 100%;
+    }
+    @include media-viewport-medium {
+      width: 600px;
+    }
+  }
+}
+
+.journeyList {
+  position: relative;
+  padding-left: 21.5px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 3px;
+    height: calc(100% + 15px);
+    background: var(--matterColor);
+  }
+  @include media-viewport-medium {
+    width: 600px;
+    &::before {
+      height: 100%;
+    }
+  }
+}
+
+.journeyItem {
+  margin-bottom: 50px;
+}
+
+.imageContainer {
+  position: relative;
+  background-color: var(--matterColorNegative);
+  padding-bottom: 60%;
+
+  @include media-viewport-medium {
+    padding-bottom: 65%;
+  }
+}
+
+.journeyItemTitle {
+  font-size: 20px;
+  letter-spacing: -0.33px;
+  line-height: 24px;
+  font-weight: var(--fontWeightSemiBold);
+  margin: 20px 0 10px 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -21.5px;
+    width: 10px;
+    height: 4px;
+    background: var(--matterColor);
+    top: 11px;
+  }
+}
+
+.breakLine {
+  display: block;
+  height: 30px;
+  width: 100%;
+}
+
+.journeyDescription p {
+  font-size: 14px;
+  font-weight: var(--fontWeightRegular);
+  line-height: 24px;
+  margin: 0;
+}
+
+.websiteLink {
+  color: var(--primaryColor);
+}

@@ -1,0 +1,270 @@
+@font-face {
+  /* 'Poppins-Regular' */
+  font-family: 'poppins';
+  src: url('/static/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  /* 'Poppins-Regular Italic' */
+  font-family: 'poppins';
+  src: url('/static/fonts/Poppins-Regular-Italic.ttf') format('truetype');
+  font-weight: 400;
+  /* Regular */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('/static/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('/static/fonts/Poppins-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  /* Medium italics */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('/static/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('/static/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  /* Bold */
+  font-style: normal;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v3/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZJhjp-Ek-_EeAmM.woff')
+    format('woff');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'poppins', Helvetica, Arial, sans-serif;
+  color: #4a4a4a;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Page color */
+  --primaryColor: #0098da;
+  --secondaryColor: #000000;
+
+  --primaryButtonColor: #0098da;
+  --borderColor: #f4f4f4;
+  --seperatorColor: #979797;
+
+  /* Matter colors */
+  --matterColorDarkBlow: #2D2D2D;
+  --matterColorDark: #000000;
+  --matterColor: #4a4a4a;
+  --matterColorAnti: #b2b2b2;
+  --matterColorNegative: #e6e6e6;
+  --matterColorEA: #eaeaea;
+  --matterColorNear: #f4f4f4;
+  --matterColorBright: #fcfcfc;
+  --matterColorLight: #ffffff;
+  --matterColorGray: #EEEEEE;
+  --matterColorGreyBorder: #e3e3e3;
+  --matterColorDarkGrey: #343434;
+  --matterColorLightGrey: #f2f2f2;
+  --matterColorLightGreen: #0196B3;
+  --matterColorLightBlue: #D9ECFD;
+  --attentionColor: #e8909c;
+  --attentionColorLight: #fff7f0;
+  --attentionColorHover: #eca5af;
+  --failColorLight: #fff0f0;
+
+  --successColorLight: #f0fff6;
+  /* Form colors */
+  --successColor: #2ecc71;
+  --warningColor: #ffaa00;
+  --failColor: #ff0000;
+
+  /* Fonts */
+  --fontWeightLight: 300;
+  --fontWeightRegular: 400;
+  --fontWeightMedium: 500;
+  --fontWeightSemiBold: 600;
+  --fontWeightBold: 700;
+  --fontWeightHeavy: 900;
+  --defaultFont: 'poppins', Arial, sans-serif;
+  --interFont: 'Inter', Arial, sans-serif;
+  /* Shadows */
+  --boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  --boxShadowTop: 0 -2px 4px 0 rgba(0, 0, 0, 0.1);
+  --boxShadowLight: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --boxShadowPopup: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  --boxShadowPopupLight: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  --boxShadowBreakdown: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  --boxShadowButton: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  --boxShadowListingCard: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+  --boxShadowNotFoundPageSearch: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  --boxShadowSectionLocationHover: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+  --boxShadowBottomForm: 0 -2px 4px 0 rgba(0, 0, 0, 0.05);
+  --boxShadowFilterButton: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+
+  /* ================ Z-index base levels ================ */
+
+  /* topbar is positioned slightly above content */
+  --zIndexTopbar: 10;
+  /* small popups on UI should use z-indexes above 50 */
+  --zIndexPopup: 50;
+  /* modals and UI overlays should use z-indexes above 100 */
+  --zIndexModal: 100;
+  /* generic error message should overlay even modals */
+  --zIndexGenericError: 200;
+
+  /* ================ Topbar heights ================ */
+
+  --topbarHeight: 60px;
+  --topbarHeightDesktop: 72px;
+
+  /* ================ TabNav ================ */
+  --TabNav_linkWidth: 240px;
+
+  /* ================ Transition styles ================ */
+
+  --transitionStyle: ease-in 0.2s;
+  --transitionStyleButton: ease-in-out 0.1s;
+
+  /* ================ Button style ================ */
+
+  --buttonMobileStyle: {
+    /* Size */
+    width: 100%;
+    height: 54px;
+
+    /* Typo */
+    font-size: 16px;
+    font-weight: var(--fontWeightRegular);
+  }
+
+  /* ================ Default font ================ */
+
+  --marketplaceDefaultFontStyles: {
+    font-family: 'poppins', Helvetica, Arial, sans-serif;
+    font-weight: var(--fontWeightMedium);
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    /* No margins for default font */
+
+    @media (--viewportMedium) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  --marketplaceSmallFontStyles: {
+    font-family: 'poppins', Helvetica, Arial, sans-serif;
+    font-weight: var(--fontWeightMedium);
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  /* ================ Body font ================ */
+
+  --marketplaceBodyFontStyles: {
+    font-family: 'poppins', Helvetica, Arial, sans-serif;
+    font-weight: var(--fontWeightMedium);
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    /* margin-top + n * line-height + margin-bottom => x * 6px */
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    @media (--viewportMedium) {
+      font-size: 20px;
+      line-height: 32px;
+      /* margin-top + n * line-height + margin-bottom => x * 8px */
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  /* ================ Hero title ================ */
+
+  --marketplaceHeroTitleFontStyles: {
+    font-family: var(--handwrittenFont);
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    /* margin-top + n * line-height + margin-bottom => x * 6px */
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-weight: 300;
+
+    @media (--viewportMedium) {
+      font-size: 56px;
+      line-height: 56px;
+      letter-spacing: -1.5px;
+      /* margin-top + n * line-height + margin-bottom => x * 8px */
+      margin-top: 25px;
+      margin-bottom: 31px;
+    }
+
+    @media all and (min-width: 1440px) {
+      font-size: 80px;
+      line-height: 80px;
+      letter-spacing: -2px;
+    }
+  }
+
+  /* ================ Modal title ================ */
+
+  --marketplaceModalTitleStyles {
+    font-weight: var(--fontWeightSemiBold);
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.5px;
+    margin: 0;
+    font-weight: var(--fontWeightBold);
+
+    @media (--viewportMedium) {
+      font-weight: var(--fontWeightSemiBold);
+      line-height: 40px;
+      letter-spacing: -0.9px;
+      margin: 0;
+    }
+  }
+}
+
+.disabledScrolling {
+  overflow: hidden;
+}

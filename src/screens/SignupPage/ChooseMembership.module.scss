@@ -1,0 +1,79 @@
+@use '../../styles/mediaQueries.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+.root {
+  padding: 28px 24px 32px 24px;
+
+  @include media-viewport-medium {
+    padding: 44px 12.5vw;
+  }
+
+  @include media-viewport-larger {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: auto;
+    width: 100%;
+    max-width: 1056px;
+  }
+}
+
+.pageTitle {
+  @include marketplaceH1FontStyles;
+  font-weight: var(--fontWeightSemiBold);
+  margin-bottom: 38px;
+
+  @include media-viewport-large {
+    margin-bottom: 60px;
+  }
+}
+
+.planList {
+  padding-bottom: 20px;
+  max-width: 1052px;
+  margin: auto;
+
+  @include media-viewport-large {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @include media-viewport-larger {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: no-wrap;
+  }
+}
+
+.planCard {
+  margin-bottom: 20px;
+
+  @include media-viewport-large {
+    width: 45%;
+  }
+
+  @include media-viewport-larger {
+    width: 248px;
+  }
+}
+
+.selectedPlanCard {
+  border: 1px solid var(--primaryColor);
+}
+
+.bottomWrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 758px;
+  margin: auto;
+}
+
+.cancel {
+  border: 0px solid transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.submit {
+  width: 164px;
+}

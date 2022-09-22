@@ -1,0 +1,52 @@
+@use '../../../styles/fonts.scss' as *;
+@use '../../../styles/mediaQueries.scss' as *;
+
+.root {
+}
+
+.nameFields {
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.field {
+  margin-bottom: 28px;
+}
+
+.firstName {
+  flex: 1;
+  margin-right: 24px;
+}
+
+.lastName {
+  flex: 2;
+}
+
+.agreeTheTermsLabel {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--matterColor);
+}
+
+.agreeTheTermsLabel a {
+  color: var(--matterColor);
+}
+
+.bottomWrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 758px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.cancel {
+  border: 0px solid transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.submit {
+  width: 164px;
+}

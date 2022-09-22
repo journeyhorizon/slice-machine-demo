@@ -1,0 +1,27 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Aute excepteur mollit laboris eiusmod et et ea.",
+          "spans": []
+        }
+      ],
+      "title_color": "#543ffd",
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Anim sunt ea esse ad dolor reprehenderit voluptate magna eiusmod tempor. Exercitation ut velit aute cupidatat voluptate in voluptate exercitation ad et nostrud in laborum ipsum fugiat. Minim irure fugiat do cupidatat aliqua ullamco aliquip est Lorem voluptate consequat esse.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "hero_paragraph"
+  }
+]

@@ -1,0 +1,45 @@
+@use '../../src/styles/mediaQueries.scss' as *;
+
+.root {
+  padding: 30px 24px 100px;
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+  .imageWrapper {
+    width: 100%;
+    min-height: 150px;
+    max-height: 700px;
+    background-color: var(--matterColorNegative);
+    @include media-viewport-medium {
+      min-height: 300px;
+    }
+
+    @include media-viewport-large {
+      min-height: 400px;
+    }
+  }
+
+  span {
+    position: unset !important;
+  }
+
+  div {
+    position: unset !important;
+  }
+
+  img {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    max-height: 700px !important;
+  }
+
+  @include media-viewport-medium {
+    padding: 60px 12.5vw 141px;
+  }
+
+  @include media-viewport-large {
+    padding: 60px 62px 140px 62px;
+  }
+}

@@ -1,0 +1,122 @@
+@use '../../styles/mediaQueries.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+.root {
+  // Outline
+  border: 1px solid var(--matterColorNegative);
+  border-radius: 4px;
+}
+
+.header {
+  position: relative;
+
+  // Layout
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Size
+  height: 52px;
+
+  // Fill
+  background-color: var(--matterColorNegative);
+
+  @include media-viewport-large {
+    justify-content: flex-start;
+    padding: 0 40px;
+  }
+}
+
+.discount {
+  // Position
+  position: absolute;
+  right: 5px;
+  bottom: -20px;
+
+  // Layout
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Fill
+  background-image: url('../../assets/star-mobile.png');
+  background-size: 90%;
+  background-position: center;
+
+  // Size
+  width: 56px;
+  height: 56px;
+
+  // Typo
+  font-size: 9px;
+  font-weight: var(--fontWeightSemiBold);
+  line-height: 10px;
+  color: var(--matterColorLight);
+  text-align: center;
+
+  // Spacing
+  padding: 5px 17px 0px;
+
+  @include media-viewport-large {
+    right: 8px;
+    bottom: -35px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: var(--fontWeightSemiBold);
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.main {
+  padding: 20px 64px;
+  text-align: center;
+
+  @include media-viewport-large {
+    padding: 20px 24px;
+  }
+}
+
+.content {
+}
+
+.priceInfo {
+  font-size: 18px;
+  font-weight: var(--fontWeightMedium);
+  margin-bottom: 10px;
+}
+
+.priceMoreInfo {
+  font-size: 12px;
+  font-weight: var(--fontWeightRegular);
+  margin-bottom: 20px;
+}
+
+.priceMoreInfoHighligh {
+  color: var(--primaryColor);
+}
+
+.action {
+}
+
+.selectBtn {
+  height: 40px;
+  font-size: 16px;
+  font-weight: var(--fontWeightRegular);
+
+  // Size
+  max-width: 300px;
+
+  // Spacing
+  margin: 0 auto 20px;
+}
+
+.fullDetailLink {
+  font-size: 12px;
+  font-weight: var(--fontWeightRegular);
+  color: var(--primaryColor);
+  line-height: 12px;
+  text-decoration: underline;
+}

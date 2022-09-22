@@ -1,0 +1,94 @@
+@use '../../src/styles/fonts.scss' as *;
+@use '../../src/styles/mediaQueries.scss' as *;
+
+.root {
+  background-size: 100% auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 84px;
+
+  @include media-viewport-medium {
+    padding-bottom: 160px;
+  }
+
+  @include media-viewport-large {
+    padding-bottom: 200px;
+  }
+
+  @include media-viewport-larger {
+    padding-bottom: 14vw;
+  }
+}
+
+.heroImageContainer {
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+
+  @include media-viewport-medium {
+    background-position: top;
+    height: 880px;
+  }
+
+  @include media-viewport-larger {
+    height: 880px;
+  }
+}
+
+.content {
+  width: 220px;
+  margin: auto;
+
+  @include media-viewport-medium {
+    width: auto;
+    max-width: 880px;
+    text-align: center;
+  }
+}
+
+.title {
+  @include marketplaceHeroTitleFontStyles;
+  margin-top: 0;
+  text-shadow: 2px 2px rgba($color: #000000, $alpha: 0.5);
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  color: var(--matterColorLight);
+}
+
+.callToAction {
+  width: 243px;
+  margin: auto;
+
+  @include media-viewport-medium {
+    width: 350px;
+  }
+
+  @include media-viewport-larger {
+    width: 486px;
+  }
+}
+
+.heroLogosContainer {
+  // Size
+  height: 231px;
+
+  // Layout
+  margin-top: 20px;
+  margin-left: 2px;
+
+  @include media-viewport-medium {
+    margin: 60px 60px 0;
+    // Size
+    height: 200px;
+  }
+
+  @include media-viewport-large {
+    margin: 60px 60px 0;
+
+    // Size
+    height: 240px;
+  }
+}

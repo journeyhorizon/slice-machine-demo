@@ -1,0 +1,169 @@
+{
+  "id": "hero_section",
+  "type": "SharedSlice",
+  "name": "HeroSection",
+  "description": "HeroSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroSection",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "cta_text": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Text",
+            "placeholder": ""
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "mobile_background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Mobile background image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "hero_image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "hero_mobile_image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero mobile image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "logos_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Logos background color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "brand_name": {
+          "type": "Text",
+          "config": {
+            "label": "Brand Name",
+            "placeholder": ""
+          }
+        },
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "logo_mobile_width": {
+          "type": "Number",
+          "config": {
+            "label": "Logo mobile width ",
+            "placeholder": ""
+          }
+        },
+        "logo_width": {
+          "type": "Number",
+          "config": {
+            "label": "Logo width",
+            "placeholder": ""
+          }
+        },
+        "logo_mobile_height": {
+          "type": "Number",
+          "config": {
+            "label": "Logo mobile height",
+            "placeholder": ""
+          }
+        },
+        "logo_height": {
+          "type": "Number",
+          "config": {
+            "label": "Logo height",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "withoutLogos",
+      "name": "Without logos",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroSection",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "cta_text": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Text",
+            "placeholder": ""
+          }
+        },
+        "background_url": {
+          "type": "Text",
+          "config": {
+            "label": "Background Url",
+            "placeholder": ""
+          }
+        },
+        "mobile_background_url": {
+          "type": "Text",
+          "config": {
+            "label": "Mobile background url",
+            "placeholder": ""
+          }
+        },
+        "hero_image_url": {
+          "type": "Text",
+          "config": {
+            "label": "Hero image url",
+            "placeholder": ""
+          }
+        },
+        "hero_mobile_image_url": {
+          "type": "Text",
+          "config": {
+            "label": "Hero mobile image url",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+@use '../../styles/ui.scss' as *;
+
+.root {
+  position: relative;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: var(--fontWeightSemiBold);
+}
+
+.input {
+  @include marketplaceInputStyles;
+  border-bottom-color: var(--warningColor);
+}
+
+.iconInput {
+  position: absolute;
+  right: 0;
+  top: 28px;
+}
+
+.inputSuccess {
+  border-bottom-color: var(--successColor);
+}
+
+.inputError {
+  border-bottom-color: var(--failColor);
+}
+
+.textarea {
+}
